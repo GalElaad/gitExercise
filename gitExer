@@ -1,6 +1,8 @@
 class Converter:
-    def __init__(self, voltage):
+    def __init__(self, voltage,maxVol,bitNum):
         self.voltage=voltage
+        self.maxVol=maxVol
+        self.bitNum=bitNum
 
     def toDigital(self):
         newV=bin(round(self.voltage/5*1023))
