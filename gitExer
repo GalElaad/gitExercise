@@ -1,0 +1,14 @@
+class Converter:
+    def __init__(self, voltage):
+        self.voltage=voltage
+
+    def toDigital(self):
+        newV=bin(round(self.voltage/5*1023))
+        return newV
+
+
+def main():
+    c1= Converter(2.7)
+    print(c1.toDigital())
+
+main()
